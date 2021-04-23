@@ -3,6 +3,7 @@ export interface CommonConfig {
     dateFormat?: string | boolean,
     headers?: boolean,
     logger?: (text: string) => any,
+    params?: boolean,
 }
 
 export interface GlobalLogConfig extends CommonConfig {

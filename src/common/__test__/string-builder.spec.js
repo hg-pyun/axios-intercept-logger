@@ -50,6 +50,14 @@ test('makeUrl should add url', () => {
     expect(result).toContain('https://github.com/hg-pyun');
 });
 
+test('makeParams should add params', () => {
+    const sb = new StringBuilder({ params: true });
+    const params = { param1: 'value1', param2: 'value2' };
+    const result = sb.makeParams(params).build();
+
+    expect(result).toContain(JSON.stringify(params));
+});
+
 test('makeMethod should add method with upper case', () => {
     const sb = new StringBuilder(getGlobalConfig());
     const result = sb.makeMethod('get').build();

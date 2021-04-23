@@ -48,6 +48,11 @@ class StringBuilder {
         return this;
     }
 
+    makeParams(params?: object) {
+        if(this.config.params && params) this.printQueue.push(JSON.stringify(params));
+        return this;
+    }
+
     makeMethod(method?: string) {
         if(this.config.method && method) this.printQueue.push(chalk.yellow(method.toUpperCase()));
         return this;

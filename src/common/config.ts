@@ -3,6 +3,7 @@ import { ErrorLogConfig, GlobalLogConfig, RequestLogConfig, ResponseLogConfig } 
 let globalConfig: Required<GlobalLogConfig> = {
     method: true,
     url: true,
+    params: false,
     data: true,
     status: true,
     statusText: true,

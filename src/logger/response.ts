@@ -4,7 +4,7 @@ import { assembleBuildConfig } from '../common/config';
 import StringBuilder from '../common/string-builder';
 
 function responseLogger(response: AxiosResponse, config: ResponseLogConfig = {}) {
-    const {config: {url, method}, status, statusText, data, headers} = response;
+    const {config: {url, method, params}, status, statusText, data, headers} = response;
     const buildConfig = assembleBuildConfig(config);
 
     const stringBuilder = new StringBuilder(buildConfig);
@@ -13,6 +13,7 @@ function responseLogger(response: AxiosResponse, config: ResponseLogConfig = {})
         .makeDateFormat(new Date())
         .makeMethod(method)
         .makeUrl(url)
+        .makeParams(params)
         .makeStatus(status, statusText)
         .makeHeader(headers)
         .makeData(data)
