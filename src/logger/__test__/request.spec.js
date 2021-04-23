@@ -9,6 +9,7 @@ const axiosRequestConfig = {
     },
     method: 'GET',
     url: 'https://github.com/hg-pyun',
+    headers: [],
 };
 
 beforeEach(() => {

@@ -8,6 +8,8 @@ function requestLogger(request: AxiosRequestConfig, config: RequestLogConfig = {
     const {url, method, data, headers} = request;
     const buildConfig = assembleBuildConfig(config);
 
+    request.headers['Request-Start-Date-Time'] = new Date().getTime();
+
     const stringBuilder = new StringBuilder(buildConfig);
     const log = stringBuilder
         .makeLogTypeWithPrefix('Request')

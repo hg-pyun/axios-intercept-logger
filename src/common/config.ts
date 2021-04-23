@@ -10,6 +10,7 @@ let globalConfig: Required<GlobalLogConfig> = {
     prefixText: 'Axios',
     dateFormat: false,
     headers: false,
+    responseTime: true,
 };
 
 function getGlobalConfig() {

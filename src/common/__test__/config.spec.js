@@ -14,6 +14,7 @@ test('Default globalConfig properties should be all true + console should be the
         dateFormat: false,
         prefixText: DEFAULT_PREFIX,
         headers: false,
+        responseTime: true,
     });
 });
 
@@ -35,6 +36,7 @@ test('setGlobalConfig should set config. getGlobalConfig should return globalCon
         dateFormat: false,
         prefixText: DEFAULT_PREFIX,
         headers: false,
+        responseTime: true,
     });
 });
 
@@ -61,5 +63,6 @@ test('assembleBuildConfig should return merged with globalConfig object.', () =>
         dateFormat: 'hh:mm:ss',
         prefixText: DEFAULT_PREFIX,
         headers: false,
+        responseTime: true,
     });
 });

@@ -6,6 +6,7 @@ const axiosResponse = {
     config: {
         url: 'https://github.com/hg-pyun',
         method: 'GET',
+        headers: [],
     },
     data: 'dummy data',
     status: 500,
